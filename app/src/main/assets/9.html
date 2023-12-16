@@ -1,0 +1,340 @@
+<!--
+  ~ /*
+  ~ *  Created Ernald Zykaj on 29/12/20 10:26 PM
+  ~ *  Copyright Ⓒ 2020. All rights reserved Ⓒ 2020
+  ~ *  Last modified: 26/12/20 1:41 AM
+  ~ *
+  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  ~ *  except in compliance with the License. You may obtain a copy of the License at
+  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
+  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+  ~ *   either express or implied. See the License for the specific language governing permissions and
+  ~ *   limitations under the License.
+  ~ */
+  ~
+  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Learn</title>
+<style>
+
+body {
+margin-top:10px;
+   	margin-left:5px;
+	margin-right:5px;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+	font-size:18px;
+}
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+	font-size:20px;    
+}
+
+td, th { border: 1px solid #CCC; height: 30px; } /* Make cells a bit taller */
+
+th {  
+    background: #000000; /* Light grey background */
+	color: white;
+    font-weight: bold; /* Make sure they're bold */
+}
+
+td {  
+    background: #FAFAFA; /* Lighter grey background */
+    text-align: center; /* Center our text */
+}
+Now have a
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered td a
+{
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#000000;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+   }
+
+
+
+
+.bordered td {
+}
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#000000;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+	
+}
+
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+
+
+</style>
+
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" type="text/css" href="toggle.css">
+    <script type="text/javascript" src="toggle.js">
+	</script>
+
+	
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+
+
+
+	
+<h3 style="margin-top:-10px;">Restaurant</h3>
+
+<table border="1" align="center" cellpadding="3" cellspacing="3" class="printDiv">
+<thead>
+<tr>
+<th>English</th>
+<th>Albanian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The restaurant</td>
+<td>Restoranti&nbsp;-&nbsp;<i>&#638;&#949;st&#596;&#638;anti</i></td>
+</tr>
+<tr>
+<td>Would you like to eat?</td>
+<td>Do t&#235; hash?&nbsp;-&nbsp;<i>d&#596; t&#601; ha&#643;?</i></td>
+</tr>
+<tr>
+<td>Yes, with pleasure</td>
+<td>Po, dua&nbsp;-&nbsp;<i>p&#596; dua</i></td>
+</tr>
+<tr>
+<td>To eat</td>
+<td>T&#235; hash&nbsp;-&nbsp;<i>t&#601; ha&#643;</i></td>
+</tr>
+<tr>
+<td>Where can we eat?</td>
+<td>Ku mund t&#235; ham&#235;?&nbsp;-&nbsp;<i>ku mund t&#601; ham&#601;?</i></td>
+</tr>
+<tr>
+<td>Where can we have lunch?</td>
+<td>Ku mund t&#235; drekojm&#235;?&nbsp;-&nbsp;<i>ku mund t&#601; d&#638;&#603;k&#596;jm&#601;</i></td>
+</tr>
+<tr>
+<td>Dinner</td>
+<td>Darka&nbsp;-&nbsp;<i>da&#638;ka</i></td>
+</tr>
+<tr>
+<td>Breakfast</td>
+<td>M&#235;ngj&#235;si&nbsp;-&nbsp;<i>m&#601;n&#607;&#949;si</i></td>
+</tr>
+<tr>
+<td>Excuse me!</td>
+<td>Ju lutem!&nbsp;-&nbsp;<i>ju lut&#949;m</i></td>
+</tr>
+<tr>
+<td>The menu, please</td>
+<td>Menun&#235;, ju lutem!&nbsp;-&nbsp;<i>m&#949;nun&#601;, ju lut&#949;m</i></td>
+</tr>
+<tr>
+<td>Here is the menu</td>
+<td>Urdh&#235;roni menun&#235;!&nbsp;-&nbsp;<i>u&#638;&#240;&#601;&#638;&#596;ni m&#949;nun&#601;</i></td>
+</tr>
+<tr>
+<td>What do you prefer to eat? Meat or fish?</td>
+<td>&#199;far&#235; d&#235;shiron t&#235; hash? Mish apo peshk?&nbsp;-&nbsp;<i>&#679;fa&#638;&#601; d&#601;&#643;i&#638;&#596;n t&#601; ha&#643;? mi&#643; ap&#596; p&#949;&#643;k?</i></td>
+</tr>
+<tr>
+<td>With rice</td>
+<td>Me oriz.&nbsp;-&nbsp;<i>m&#949; &#596;&#638;iz</i></td>
+</tr>
+<tr>
+<td>With pasta</td>
+<td>Me pasta&nbsp;-&nbsp;<i>m&#603; pasta</i></td>
+</tr>
+<tr>
+<td>Potatoes</td>
+<td>Patate&nbsp;-&nbsp;<i>patat&#949;</i></td>
+</tr>
+<tr>
+<td>Vegetables</td>
+<td>Perime&nbsp;-&nbsp;<i>p&#949;&#638;im&#949;</i></td>
+</tr>
+<tr>
+<td>Scrambled eggs - fried eggs - or a boiled egg</td>
+<td>Vez&#235; t&#235; rrahura - sy - ose t&#235; ziera&nbsp;-&nbsp;<i>v&#949;z&#601; t&#601; rahu&#638;a &#150; sy - &#596;s&#949; t&#601; zi&#949;&#638;a</i></td>
+</tr>
+<tr>
+<td>Bread</td>
+<td>Buk&#235;&nbsp;-&nbsp;<i>buk&#601;</i></td>
+</tr>
+<tr>
+<td>Butter</td>
+<td>Gjalpe&nbsp;-&nbsp;<i>&#607;alp</i></td>
+</tr>
+<tr>
+<td>Salad</td>
+<td>Nj&#235; sallat&#235;&nbsp;-&nbsp;<i>&#626;&#601; sa&#619;at&#601;</i></td>
+</tr>
+<tr>
+<td>Dessert</td>
+<td>Nj&#235; &#235;mb&#235;lsir&#235;&nbsp;-&nbsp;<i>&#626;&#601; &#601;mb&#601;lsi&#638;&#601;</i></td>
+</tr>
+<tr>
+<td>Fruit</td>
+<td>Fruta&nbsp;-&nbsp;<i>fruta</i></td>
+</tr>
+<tr>
+<td>Can I have a knife, please?</td>
+<td>Keni nj&#235; thik&#235; ju lutem?&nbsp;-&nbsp;<i>k&#603;ni &#626;&#601; &#629;ik&#601;, ju lut&#603;m?</i></td>
+</tr>
+<tr>
+<td>Yes, I'll bring it to you right away</td>
+<td>Po, jua sjell menj&#235;her&#235;.&nbsp;-&nbsp;<i>p&#596;, jua sj&#949;&#619; m&#949;&#626;&#949;h&#949;&#638;&#601;</i></td>
+</tr>
+<tr>
+<td>a knife</td>
+<td>Nj&#235; thik&#235;&nbsp;-&nbsp;<i>&#626;&#601; &#952;ik&#601;</i></td>
+</tr>
+<tr>
+<td>a fork</td>
+<td>Nj&#235; pirun&nbsp;-&nbsp;<i>&#626;&#601; pi&#638;un</i></td>
+</tr>
+<tr>
+<td>a spoon</td>
+<td>Nj&#235; lug&#235;&nbsp;-&nbsp;<i>&#626;&#601; lu&#609;&#601;</i></td>
+</tr>
+<tr>
+<td>Is it a warm dish?</td>
+<td>&#203;sht&#235; gjell&#235; e ngroht&#235;?&nbsp;-&nbsp;<i>&#601;&#643;t&#601; gjell&#601; &#949; n&#609;&#638;&#596;ht&#601;?</i></td>
+</tr>
+<tr>
+<td>Yes, very hot also!</td>
+<td>Po, dhe shum&#235; pikante gjithashtu&nbsp;-&nbsp;<i>p&#596;, &#240;&#949; &#643;um&#601; pikant&#949; &#607;i&#952;a&#643;tu</i></td>
+</tr>
+<tr>
+<td>Warm</td>
+<td>E ngroht&#235;&nbsp;-&nbsp;<i>&#949; n&#609;&#638;&#596;ht&#601;</i></td>
+</tr>
+<tr>
+<td>Cold</td>
+<td>E ftoht&#235;&nbsp;-&nbsp;<i>&#949; ft&#596;ht&#601;</i></td>
+</tr>
+<tr>
+<td>Hot</td>
+<td>Pikante&nbsp;-&nbsp;<i>pikant&#949;</i></td>
+</tr>
+<tr>
+<td>I'll have fish</td>
+<td>Un&#235; do marr peshk&nbsp;-&nbsp;<i>un&#601; d&#596; mar p&#949;&#643;k</i></td>
+</tr>
+<tr>
+<td>Me too</td>
+<td>Edhe un&#235;&nbsp;-&nbsp;<i>&#949;&#240;&#949; un&#601;</i></td>
+</tr>
+</tbody>
+</table>
+	
+	
+</body>
+</html>

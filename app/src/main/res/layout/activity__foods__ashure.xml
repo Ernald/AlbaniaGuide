@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~ *  Created Ernald Zykaj on 29/12/20 10:26 PM
+  ~ *  Copyright Ⓒ 2020. All rights reserved Ⓒ 2020
+  ~ *  Last modified: 24/12/20 8:31 PM
+  ~ *
+  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  ~ *  except in compliance with the License. You may obtain a copy of the License at
+  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
+  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+  ~ *   either express or implied. See the License for the specific language governing permissions and
+  ~ *   limitations under the License.
+  ~ */
+  ~
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="TourCityGuide.Activity_Foods_Ashure">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/menu_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="#fff"
+            android:background="@color/colorPrimary"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/food_ashure"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/call_icon_image"
+                android:layout_width="113dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/call_ic" />
+
+            <ImageView
+                android:id="@+id/web_search_image"
+                android:layout_width="135dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/call_icon_image"
+                android:src="@drawable/web_ic"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:paddingTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/google_map_search_image"
+                android:layout_width="135dp"
+                android:layout_height="50dp"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:paddingTop="10dp"
+                android:src="@drawable/map_ic"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chicle"
+                android:paddingLeft="5dp"
+                android:paddingTop="20dp"
+                android:text="Summary"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:fontFamily="@font/chicle"
+                android:text="Ashure is a traditional Albanian dessert that originated from Turkey.
+It has a gelatin consistency that melts in your mouth, giving you the chance to taste the nuts or dry fruit that it is made with.
+Ashure can best be described as a sweet porridge that is served cold.
+It is a popular Albanian dessert that is traditionally eaten during the first month of the Islamic calendar. However, you can easily find this tasty dessert in any pastry in Albania all year round.
+It is a great healthy choice for whenever you have a sweet tooth.
+
+"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

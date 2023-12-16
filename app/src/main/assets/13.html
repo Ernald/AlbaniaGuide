@@ -1,0 +1,344 @@
+<!--
+  ~ /*
+  ~ *  Created Ernald Zykaj on 29/12/20 10:26 PM
+  ~ *  Copyright Ⓒ 2020. All rights reserved Ⓒ 2020
+  ~ *  Last modified: 26/12/20 1:41 AM
+  ~ *
+  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  ~ *  except in compliance with the License. You may obtain a copy of the License at
+  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
+  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+  ~ *   either express or implied. See the License for the specific language governing permissions and
+  ~ *   limitations under the License.
+  ~ */
+  ~
+  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Learn</title>
+<style>
+
+body {
+margin-top:10px;
+   	margin-left:5px;
+	margin-right:5px;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+	font-size:18px;
+}
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+	font-size:20px;    
+}
+
+td, th { border: 1px solid #CCC; height: 30px; } /* Make cells a bit taller */
+
+th {  
+    background: #000000; /* Light grey background */
+	color: white;
+    font-weight: bold; /* Make sure they're bold */
+}
+
+td {  
+    background: #FAFAFA; /* Lighter grey background */
+    text-align: center; /* Center our text */
+}
+Now have a
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered td a
+{
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#000000;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+   }
+
+
+
+
+.bordered td {
+}
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#000000;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+	
+}
+
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+
+
+</style>
+
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" type="text/css" href="toggle.css">
+    <script type="text/javascript" src="toggle.js">
+	</script>
+
+	
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+
+
+
+	
+<h3 style="margin-top:-10px;">Beach</h3>
+
+<table border="1" align="center" cellpadding="3" cellspacing="3" class="printDiv">
+<thead>
+<tr>
+<th>English</th>
+<th>Albanian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The beach</td>
+<td>Plazhi&nbsp;-&nbsp;<i>pla&#658;i</i></td>
+</tr>
+<tr>
+<td>Do you know where I can buy a ball?</td>
+<td>Dini gj&#235; se ku mund t&#235; blej nj&#235; top?&nbsp;-&nbsp;<i>dini &#607;&#601; s&#949; ku mund t&#601; bl&#949;j &#626;&#601; t&#596;p</i></td>
+</tr>
+<tr>
+<td>There is a store in this direction</td>
+<td>Ka nj&#235; dyqan n&#235; k&#235;t&#235; drejtim&nbsp;-&nbsp;<i>ka &#626;&#601; dycan n&#601; k&#601;t&#601; d&#638;&#949;jtim</i></td>
+</tr>
+<tr>
+<td>a ball</td>
+<td>Nj&#235; top&nbsp;-&nbsp;<i>&#626;&#601; t&#596;p</i></td>
+</tr>
+<tr>
+<td>Binoculars</td>
+<td>Dylbi&nbsp;-&nbsp;<i>dylbi</i></td>
+</tr>
+<tr>
+<td>a cap</td>
+<td>Kapele&nbsp;-&nbsp;<i>kap&#949;le</i></td>
+</tr>
+<tr>
+<td>a towel</td>
+<td>Peshqir&nbsp;-&nbsp;<i>p&#949;&#643;ci&#638;</i></td>
+</tr>
+<tr>
+<td>Sandals</td>
+<td>Sandale&nbsp;-&nbsp;<i>sandal&#949;</i></td>
+</tr>
+<tr>
+<td>a bucket</td>
+<td>Kov&#235;&nbsp;-&nbsp;<i>k&#596;v&#601;</i></td>
+</tr>
+<tr>
+<td>Suntan lotion</td>
+<td>Krem dielli&nbsp;-&nbsp;<i>k&#638;&#949;m di&#949;&#619;i</i></td>
+</tr>
+<tr>
+<td>Swimming trunks</td>
+<td>Mbathje plazhi&nbsp;-&nbsp;<i>mba&#952;j&#949; pla&#658;i</i></td>
+</tr>
+<tr>
+<td>Sunglasses</td>
+<td>Syze dielli&nbsp;-&nbsp;<i>syz&#949; di&#949;&#619;i</i></td>
+</tr>
+<tr>
+<td>Shellfish</td>
+<td>Guaskore&nbsp;-&nbsp;<i>&#609;uask&#596;&#638;&#949;</i></td>
+</tr>
+<tr>
+<td>Sunbathing</td>
+<td>T&#235; marr&#235;sh rreze dielli&nbsp;-&nbsp;<i>t&#601; mar&#601;&#643; r&#603;z&#603; di&#603;&#619;i</i></td>
+</tr>
+<tr>
+<td>Sunny</td>
+<td>Me diell</td>
+</tr>
+<tr>
+<td>Sunset</td>
+<td>Per&#235;ndimi i diellit&nbsp;-&nbsp;<i>p&#949;&#638;&#601;ndimi i di&#949;&#619;it</i></td>
+</tr>
+<tr>
+<td>Parasol</td>
+<td>&#199;ad&#235;r dielli&nbsp;-&nbsp;<i>&#679;ad&#601;&#638; di&#949;&#619;i</i></td>
+</tr>
+<tr>
+<td>Sunshine</td>
+<td>Diell&nbsp;-&nbsp;<i>di&#949;&#619;</i></td>
+</tr>
+<tr>
+<td>Sunstroke</td>
+<td>T&#235; bie dielli n&#235; kok&#235;&nbsp;-&nbsp;<i>t&#601; bi&#949; di&#949;&#619;i n&#601; k&#596;k&#601;</i></td>
+</tr>
+<tr>
+<td>Is it dangerous to swim here?</td>
+<td>&#203;sht&#235; e rrezikshme t&#235; notosh k&#235;tu?&nbsp;-&nbsp;<i>&#601;&#643;t&#601; &#949; r&#949;zik&#643;m&#949; t&#601; n&#596;t&#596;&#643; k&#601;tu?</i></td>
+</tr>
+<tr>
+<td>No, it is not dangerous</td>
+<td>Jo, nuk &#235;sht&#235; e rrezikshme.&nbsp;-&nbsp;<i>j&#596;, nuk &#601;&#643;t&#601; &#949; r&#949;zik&#643;m&#949;</i></td>
+</tr>
+<tr>
+<td>Yes, it is forbidden to swim here</td>
+<td>Po. &#203;sht&#235; e ndaluar t&#235; notosh k&#235;tu&nbsp;-&nbsp;<i>p&#596;, &#601;&#643;t&#601; &#949; ndalua&#638; t&#601; n&#596;t&#596;&#643; k&#601;tu</i></td>
+</tr>
+<tr>
+<td>Swim</td>
+<td>Notoj&nbsp;-&nbsp;<i>n&#596;t&#596;j</i></td>
+</tr>
+<tr>
+<td>Swimming</td>
+<td>Not&nbsp;-&nbsp;<i>n&#596;t</i></td>
+</tr>
+<tr>
+<td>Wave</td>
+<td>Dallg&#235;&nbsp;-&nbsp;<i>da&#619;&#609;&#601;</i></td>
+</tr>
+<tr>
+<td>Sea</td>
+<td>Det&nbsp;-&nbsp;<i>d&#949;t</i></td>
+</tr>
+<tr>
+<td>Dune</td>
+<td>Dun&#235;&nbsp;-&nbsp;<i>dun&#601;</i></td>
+</tr>
+<tr>
+<td>Sand</td>
+<td>R&#235;r&#235;&nbsp;-&nbsp;<i>&#638;&#601;&#638;&#601;</i></td>
+</tr>
+<tr>
+<td>What is the weather forecast for tomorrow?</td>
+<td>Cili &#235;sht&#235; parashikimi i motit p&#235;r nes&#235;r?&nbsp;-&nbsp;<i>&#678;ili &#601;&#643;t&#601; pa&#638;a&#643;ikimi i m&#596;tit p&#601;&#638; n&#603;s&#601;&#638;?</i></td>
+</tr>
+<tr>
+<td>The weather is going to change</td>
+<td>Moti do t&#235; ndryshoj&#235;&nbsp;-&nbsp;<i>m&#596;ti d&#596; t&#601; ndry&#643;&#596;j&#601;</i></td>
+</tr>
+<tr>
+<td>It is going to rain</td>
+<td>Do t&#235; bjer&#235; shi&nbsp;-&nbsp;<i>d&#596; t&#601; bj&#603;&#638;&#601; &#643;i</i></td>
+</tr>
+<tr>
+<td>It will be sunny</td>
+<td>Do jet&#235; diell&nbsp;-&nbsp;<i>d&#596; j&#603;t&#601; di&#603;&#619;</i></td>
+</tr>
+<tr>
+<td>It will be very windy</td>
+<td>Do ket&#235; shum&#235; er&#235;&nbsp;-&nbsp;<i>d&#596; k&#603;t&#601; &#643;um&#601; &#603;&#638;&#601;</i></td>
+</tr>
+<tr>
+<td>Swimming suit</td>
+<td>Kostum banjoje&nbsp;-&nbsp;<i>k&#596;stum ba&#626;&#596;j&#603;</i></td>
+</tr>
+<tr>
+<td>Sunshade</td>
+<td>Hije&nbsp;-&nbsp;<i>hij&#603;</i></td>
+</tr>
+</tbody>
+</table>
+	
+	
+</body>
+</html>

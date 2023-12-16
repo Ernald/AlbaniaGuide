@@ -1,0 +1,68 @@
+<!--
+  ~ /*
+  ~ *  Created Ernald Zykaj on 29/12/20 10:26 PM
+  ~ *  Copyright Ⓒ 2020. All rights reserved Ⓒ 2020
+  ~ *  Last modified: 25/12/20 1:11 AM
+  ~ *
+  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  ~ *  except in compliance with the License. You may obtain a copy of the License at
+  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
+  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+  ~ *   either express or implied. See the License for the specific language governing permissions and
+  ~ *   limitations under the License.
+  ~ */
+  ~
+  -->
+
+<resources>
+    <string name="app_name">Albania</string>
+
+
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="button_sign_in">Sign in</string>
+    <string name="button_sign_up">Sign up</string>
+    <string name="button_send">Send</string>
+    <string name="text_forgot_password">Forgot password?</string>
+    <string name="text_signin_message">Hello, sign in to your account</string>
+    <string name="text_signin_social_media">Or Sign in using social media</string>
+    <string name="text_signup_social_media">Or Sign up using social media</string>
+    <string name="text_signin_signup">Don\'t have an account? <b>Sign up</b></string>
+    <string name="text_signup_terms">By signing up, you agree to our <b>terms and conditions</b></string>
+    <string name="text_signup_message">Hello, let\'s set up your account</string>
+
+    <string name="text_forgot_password_title">Forgot password? No worries</string>
+    <string name="text_forgot_password_message">We will send you a link to reset your password</string>
+
+    <string name="hint_email">Email</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="explore_alb">EXPLORE ALBANIA</string>
+    <string name="start_journey">Start a new Journey</string>
+
+
+    <string name="start">Start</string>
+    <string name="display_name">Display Name</string>
+    <string name="albania_weird">Weird Albania</string>
+    <string name="weird1">There are more than 750,000 one-man concrete bunkers scattered across the countryside, dotting the landscape like giant mutated mushrooms. And former military bases now serve as seaside resorts.  ---></string>
+    <string name="weird2">Stuffed animals (like Mickey Mouse and Winnie the Pooh) hang from half-completed homes and buildings to ward off evil spirits.   ---></string>
+    <string name="weird3">In fact, Lazarat is Europe’s largest producer of marijuana. Ever stopped at a café in Amsterdam? Chances are you smoked some of the Lazarati good stuff!
+                    Weed production in Lazarat takes in six billion dollars a year, equivalent to about half of Albania’s GDP. I guess that’s why Lazarat is referred to by locals as “Europe’s wealthiest village.   --->”
+                    </string>
+    <string name="weird4">Every Albanian spends half of his day in coffee but in some cases the whole day. In the villages and 50% of the cities are consumers of grape brandy.   ---></string>
+    <string name="weird5">Today, most of Albanians in Albania do speak Italian and English, and many of them do not consider a luxury knowing foreign languages.   ---></string>
+    <string name="weird6">Most Albanians who are Muslims do not follow the rules of their religion. For example to eat pork, in this case they enjoy it a lot.   ---></string>
+
+
+    <string name="HistorialPlaces">CITIES</string>
+    <string name="FoodStreets">FOOD</string>
+    <string name="ShoppingPlaces">SHOPPING PLACES</string>
+    <string name="Hotels">HOTELS</string>
+    <string name="title_activity_albania_map">Map</string>
+
+
+</resources>

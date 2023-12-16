@@ -1,0 +1,340 @@
+<!--
+  ~ /*
+  ~ *  Created Ernald Zykaj on 29/12/20 10:26 PM
+  ~ *  Copyright Ⓒ 2020. All rights reserved Ⓒ 2020
+  ~ *  Last modified: 26/12/20 1:41 AM
+  ~ *
+  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  ~ *  except in compliance with the License. You may obtain a copy of the License at
+  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
+  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+  ~ *   either express or implied. See the License for the specific language governing permissions and
+  ~ *   limitations under the License.
+  ~ */
+  ~
+  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Learn</title>
+<style>
+
+body {
+margin-top:10px;
+   	margin-left:5px;
+	margin-right:5px;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+	font-size:18px;
+}
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+	font-size:20px;    
+}
+
+td, th { border: 1px solid #CCC; height: 30px; } /* Make cells a bit taller */
+
+th {  
+    background: #000000; /* Light grey background */
+	color: white;
+    font-weight: bold; /* Make sure they're bold */
+}
+
+td {  
+    background: #FAFAFA; /* Lighter grey background */
+    text-align: center; /* Center our text */
+}
+Now have a
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered td a
+{
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#000000;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+   }
+
+
+
+
+.bordered td {
+}
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#000000;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+	
+}
+
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+
+
+</style>
+
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" type="text/css" href="toggle.css">
+    <script type="text/javascript" src="toggle.js">
+	</script>
+
+	
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+
+
+
+	
+<h3 style="margin-top:-10px;">Time Tracking</h3>
+
+<table border="1" align="center" cellpadding="3" cellspacing="3" class="printDiv">
+<thead>
+<tr>
+<th>English</th>
+<th>Albanian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>When did you get here?</td>
+<td>Kur arrin?&nbsp;-&nbsp;<i>ku&#638; arrin?</i></td>
+</tr>
+<tr>
+<td>Today</td>
+<td>Sot&nbsp;-&nbsp;<i>s&#596;t</i></td>
+</tr>
+<tr>
+<td>Yesterday</td>
+<td>Dje&nbsp;-&nbsp;<i>dj&#949;</i></td>
+</tr>
+<tr>
+<td>Two days ago</td>
+<td>Q&#235; prej dy dit&#235;sh&nbsp;-&nbsp;<i>c&#601; p&#638;&#603;j dy dit&#601;&#643;</i></td>
+</tr>
+<tr>
+<td>How long are you staying for?</td>
+<td>Sa do q&#235;ndrosh?&nbsp;-&nbsp;<i>sa d&#596; c&#601;nd&#638;&#596;&#643;?</i></td>
+</tr>
+<tr>
+<td>I'm leaving tomorrow</td>
+<td>Largohem nes&#235;r&nbsp;-&nbsp;<i>la&#638;&#609;&#596;h&#603;m n&#603;s&#601;&#638;</i></td>
+</tr>
+<tr>
+<td>I'll be leaving the day after tomorrow</td>
+<td>Largohem pasnes&#235;r&nbsp;-&nbsp;<i>la&#638;&#609;&#596;h&#603;m pasn&#603;s&#601;&#638;</i></td>
+</tr>
+<tr>
+<td>I'll be leaving in three days</td>
+<td>Largohem p&#235;r tri dit&#235;&nbsp;-&nbsp;<i>la&#638;&#609;&#596;h&#603;m p&#601;&#638; t&#638;i dit&#601;</i></td>
+</tr>
+<tr>
+<td>Monday</td>
+<td>E h&#235;n&#235;&nbsp;-&nbsp;<i>&#949; h&#601;n&#601;</i></td>
+</tr>
+<tr>
+<td>Tuesday</td>
+<td>E mart&#235;&nbsp;-&nbsp;<i>&#949; ma&#638;t&#601;</i></td>
+</tr>
+<tr>
+<td>Wednesday</td>
+<td>E m&#235;rkur&#235;&nbsp;-&nbsp;<i>&#949; m&#601;&#638;ku&#638;&#601;</i></td>
+</tr>
+<tr>
+<td>Thursday</td>
+<td>E enjte&nbsp;-&nbsp;<i>&#949; &#949;&#626;t&#949;</i></td>
+</tr>
+<tr>
+<td>Friday</td>
+<td>E premte&nbsp;-&nbsp;<i>&#949; p&#638;&#949;mt&#949;</i></td>
+</tr>
+<tr>
+<td>Saturday</td>
+<td>E shtun&#235;&nbsp;-&nbsp;<i>&#949; &#643;tun&#601;</i></td>
+</tr>
+<tr>
+<td>Sunday</td>
+<td>E diel&#235;&nbsp;-&nbsp;<i>&#949; di&#949;l&#601;</i></td>
+</tr>
+<tr>
+<td>January</td>
+<td>Janar&nbsp;-&nbsp;<i>jana&#638;</i></td>
+</tr>
+<tr>
+<td>February</td>
+<td>Shkurt&nbsp;-&nbsp;<i>&#643;ku&#638;t</i></td>
+</tr>
+<tr>
+<td>March</td>
+<td>Mars&nbsp;-&nbsp;<i>ma&#638;s</i></td>
+</tr>
+<tr>
+<td>April</td>
+<td>Prill&nbsp;-&nbsp;<i>p&#638;i&#619;</i></td>
+</tr>
+<tr>
+<td>May</td>
+<td>Maj&nbsp;-&nbsp;<i>maj</i></td>
+</tr>
+<tr>
+<td>June</td>
+<td>Qershor&nbsp;-&nbsp;<i>c&#949;&#638;&#643;&#596;&#638;</i></td>
+</tr>
+<tr>
+<td>July</td>
+<td>Korrik&nbsp;-&nbsp;<i>k&#596;rik</i></td>
+</tr>
+<tr>
+<td>August</td>
+<td>Gusht&nbsp;-&nbsp;<i>&#609;u&#643;t</i></td>
+</tr>
+<tr>
+<td>September</td>
+<td>Shtator&nbsp;-&nbsp;<i>&#643;tat&#596;&#638;</i></td>
+</tr>
+<tr>
+<td>October</td>
+<td>Tetor&nbsp;-&nbsp;<i>t&#949;t&#596;&#638;</i></td>
+</tr>
+<tr>
+<td>November</td>
+<td>N&#235;ntor&nbsp;-&nbsp;<i>n&#601;nt&#596;&#638;</i></td>
+</tr>
+<tr>
+<td>December</td>
+<td>Dhjetor&nbsp;-&nbsp;<i>&#240;j&#949;t&#596;&#638;</i></td>
+</tr>
+<tr>
+<td>What time are you leaving at?</td>
+<td>Kur nisesh?&nbsp;-&nbsp;<i>ku&#638; nis&#603;&#643;?</i></td>
+</tr>
+<tr>
+<td>Morning, at eight o'clock</td>
+<td>N&#235; m&#235;ngjes, n&#235; or&#235;n tet&#235;&nbsp;-&nbsp;<i>n&#601; m&#601;n&#607;&#949;s, n&#601; &#596;&#638;&#601;n t&#949;t&#601;</i></td>
+</tr>
+<tr>
+<td>Morning, at a quarter past 8</td>
+<td>N&#235; m&#235;ngjes, n&#235; or&#235;n tet&#235; e nj&#235; &#231;erek&nbsp;-&nbsp;<i>n&#601; m&#601;n&#607;&#603;s, n&#601; &#596;&#638;&#601;n t&#603;t&#601; &#603; &#626;&#601; &#679;&#603;&#638;&#603;k</i></td>
+</tr>
+<tr>
+<td>Morning, at half past 8</td>
+<td>N&#235; m&#235;ngjes n&#235; or&#235;n tet&#235; e gjysm&#235;&nbsp;-&nbsp;<i>n&#601; m&#601;n&#607;&#603;s, n&#601; &#596;&#638;&#601;n t&#603;t&#601; &#603; &#607;ysm&#601;</i></td>
+</tr>
+<tr>
+<td>Morning, at a quarter to nine</td>
+<td>N&#235; m&#235;ngjes, n&#235; or&#235;n tet&#235; e dyzet&#235; e pes&#235;&nbsp;-&nbsp;<i>n&#601; m&#601;n&#607;&#949;s, n&#601; &#596;&#638;&#601;n t&#949;t&#601; &#949; dyz&#949;t&#601;&#949;p&#949;s&#601;</i></td>
+</tr>
+<tr>
+<td>Evening, at 6pm</td>
+<td>N&#235; dark&#235;, n&#235; or&#235;n tet&#235;mb&#235;dhjet&#235;&nbsp;-&nbsp;<i>n&#601; da&#638;k&#601;, n&#601; &#596;&#638;&#601;n t&#949;t&#601;mb&#601;&#240;j&#949;t&#601;</i></td>
+</tr>
+<tr>
+<td>I am late</td>
+<td>Jam me vones&#235;&nbsp;-&nbsp;<i>jam m&#949;v&#596;n&#949;s&#601;</i></td>
+</tr>
+</tbody>
+</table>
+	
+	
+</body>
+</html>

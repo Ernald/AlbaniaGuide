@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~ *  Created Ernald Zykaj on 29/12/20 10:26 PM
+  ~ *  Copyright Ⓒ 2020. All rights reserved Ⓒ 2020
+  ~ *  Last modified: 24/12/20 8:51 PM
+  ~ *
+  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  ~ *  except in compliance with the License. You may obtain a copy of the License at
+  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
+  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+  ~ *   either express or implied. See the License for the specific language governing permissions and
+  ~ *   limitations under the License.
+  ~ */
+  ~
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="TourCityGuide.activity_hotels_Fieri">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/menu_toolbar"
+            app:titleTextColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="232dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/hotel_fieri"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/call_icon_image"
+                android:layout_width="111dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/call_ic" />
+
+            <ImageView
+                android:id="@+id/web_search_image"
+                android:layout_width="135dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/call_icon_image"
+                android:src="@drawable/web_ic"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:paddingTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/google_map_search_image"
+                android:layout_width="135dp"
+                android:layout_height="50dp"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:paddingTop="10dp"
+                android:src="@drawable/map_ic"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chicle"
+                android:paddingLeft="5dp"
+                android:paddingTop="20dp"
+                android:text="Summary"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:fontFamily="@font/chicle"
+                android:text="Hotel Fieri is set in the centre of Fier, just a few steps from Mother Teresa Square. It features an à-la-carte restaurant and bar, as well as a fitness centre. Free Wi-Fi and parking are available.
+\n\nAll rooms are fitted with air-conditioning and offer modern furniture and amenities. A flat-screen TV, a minibar and a wardrobe are available in each unit. Private bathroom provides a shower, a bidet and free toiletries.
+\n\nThe hotel restaurant served traditional local specialties, as well as Italian cuisine. Guests have access to a business centre and meeting facilities. Laundry and ironing service are available, as well as shops in hotel. Room service is available.
+\n\nGuests can visit Appolonia, ancient town located 7 km from the hotel. The sea coast in Vlore can be reached in a 30-minute drive, while the UNESCO-protected Berat can also be reached in a short drive.
+\n\nGovernment institutions and banks can be reached in a few steps, as well as several big companies. The Main Bus and Train Station can be reached in just 150 m. Mother Theresa Airport is 100 km away.
+\n\nCouples particularly like the location — they rated it 8.1 for a two-person trip.
+\n\nWe speak your language!"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

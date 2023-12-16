@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "822050801447",
+    "project_id": "albania-guide-0",
+    "storage_bucket": "albania-guide-0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822050801447:android:3e85ea9265845fcdcfcb02",
+        "android_client_info": {
+          "package_name": "com.gohool.albaniaguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822050801447-h9i16t1ls465trsa24blo1v8tcfe5kli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFOwKtpbfvONwG-ErXSaB0Sq9lch7wz7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822050801447-h9i16t1ls465trsa24blo1v8tcfe5kli.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

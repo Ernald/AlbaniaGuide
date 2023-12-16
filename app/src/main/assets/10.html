@@ -1,0 +1,280 @@
+<!--
+  ~ /*
+  ~ *  Created Ernald Zykaj on 29/12/20 10:26 PM
+  ~ *  Copyright Ⓒ 2020. All rights reserved Ⓒ 2020
+  ~ *  Last modified: 26/12/20 1:41 AM
+  ~ *
+  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  ~ *  except in compliance with the License. You may obtain a copy of the License at
+  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
+  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+  ~ *   either express or implied. See the License for the specific language governing permissions and
+  ~ *   limitations under the License.
+  ~ */
+  ~
+  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Learn</title>
+<style>
+
+body {
+margin-top:10px;
+   	margin-left:5px;
+	margin-right:5px;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+	font-size:18px;
+}
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+	font-size:20px;    
+}
+
+td, th { border: 1px solid #CCC; height: 30px; } /* Make cells a bit taller */
+
+th {  
+    background: #000000; /* Light grey background */
+	color: white;
+    font-weight: bold; /* Make sure they're bold */
+}
+
+td {  
+    background: #FAFAFA; /* Lighter grey background */
+    text-align: center; /* Center our text */
+}
+Now have a
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered td a
+{
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#000000;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+   }
+
+
+
+
+.bordered td {
+}
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#000000;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+	
+}
+
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+
+
+</style>
+
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" type="text/css" href="toggle.css">
+    <script type="text/javascript" src="toggle.js">
+	</script>
+
+	
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+
+
+
+	
+<h3 style="margin-top:-10px;">Taxi</h3>
+
+<table border="1" align="center" cellpadding="3" cellspacing="3" class="printDiv">
+<thead>
+<tr>
+<th>English</th>
+<th>Albanian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Taxi!&#160;</td>
+<td>Taksi!&nbsp;-&nbsp;<i>taksi</i></td>
+</tr>
+<tr>
+<td>Where would you like to go?</td>
+<td>Ku doni t&#235; shkoni?&nbsp;-&nbsp;<i>ku d&#596;ni t&#601; &#643;k&#596;ni&#160;?</i></td>
+</tr>
+<tr>
+<td>I'm going to the train station</td>
+<td>Do t&#235; shkoj tek stacioni i trenit&nbsp;-&nbsp;<i>d&#596; t&#601; &#643;k&#596;j t&#949;k sta&#678;i&#596;ni it&#638;&#949;nit</i></td>
+</tr>
+<tr>
+<td>I'm going to the day&night Hotel</td>
+<td>Do t&#235; shkoj n&#235; hotelin Dit&#235; e Nat&#235;&nbsp;-&nbsp;<i>d&#596; t&#601; &#643;k&#596;j n&#601; h&#596;t&#949;lin dit&#601; &#949; nat&#601;</i></td>
+</tr>
+<tr>
+<td>Can you take me to the airport, please?</td>
+<td>Mund t&#235; m&#235; &#231;oni n&#235; aeroport?&nbsp;-&nbsp;<i>mund t&#601; m&#601; &#679;&#596;ni n&#601; a&#949;&#638;&#596;p&#596;&#638;t?</i></td>
+</tr>
+<tr>
+<td>Can you take my luggage?</td>
+<td>Mund t&#235; m'i merrni pak bagazhet?&nbsp;-&nbsp;<i>mund t&#601; m&#146;i merni pak ba&#609;a&#658;&#949;t&#160;?</i></td>
+</tr>
+<tr>
+<td>Is it far from here?</td>
+<td>&#203;sht&#235; larg nga k&#235;tu?&nbsp;-&nbsp;<i>&#601;&#643;t&#601; la&#638;&#609; n&#609;a k&#601;tu?</i></td>
+</tr>
+<tr>
+<td>No it's close</td>
+<td>Jo, &#235;sht&#235; af&#235;r.&nbsp;-&nbsp;<i>j&#596;, &#601;&#643;t&#601; af&#601;&#638;</i></td>
+</tr>
+<tr>
+<td>Yes it's a little bit further away</td>
+<td>Po, &#235;sht&#235; pak m&#235; larg&nbsp;-&nbsp;<i>p&#596;, &#601;&#643;t&#601; pak m&#601; la&#638;&#609;</i></td>
+</tr>
+<tr>
+<td>How much will it be?</td>
+<td>Sa do t&#235; kushtoj&#235;?&nbsp;-&nbsp;<i>sa d&#596; t&#601; ku&#643;t&#596;j&#601;?</i></td>
+</tr>
+<tr>
+<td>Take me there, please</td>
+<td>M&#235; &#231;oni k&#235;tu, ju lutem&nbsp;-&nbsp;<i>m&#601; &#679;&#596;ni k&#601;tu, ju lut&#949;m</i></td>
+</tr>
+<tr>
+<td>You go right</td>
+<td>&#203;sht&#235; n&#235; t&#235; djatht&#235;&nbsp;-&nbsp;<i>&#601;&#643;t&#601; n&#601; t&#601; dja&#952;t&#601;</i></td>
+</tr>
+<tr>
+<td>You go left</td>
+<td>&#203;sht&#235; n&#235; t&#235; majt&#235;&nbsp;-&nbsp;<i>&#601;&#643;t&#601; n&#601; t&#601; majt&#601;</i></td>
+</tr>
+<tr>
+<td>It's straight on</td>
+<td>&#203;sht&#235; drejt&nbsp;-&nbsp;<i>&#601;&#643;t&#601; d&#638;&#949;jt</i></td>
+</tr>
+<tr>
+<td>It's right here</td>
+<td>Arrit&#235;m!&nbsp;-&nbsp;<i>arit&#601;m</i></td>
+</tr>
+<tr>
+<td>It's that way</td>
+<td>&#203;sht&#235; andej!&nbsp;-&nbsp;<i>&#601;&#643;t&#601; and&#949;j</i></td>
+</tr>
+<tr>
+<td>Stop!</td>
+<td>Ndalo!&nbsp;-&nbsp;<i>ndal&#596;</i></td>
+</tr>
+<tr>
+<td>Take your time</td>
+<td>Mos u nxitoni!&nbsp;-&nbsp;<i>m&#596;s u n&#675;it&#596;ni</i></td>
+</tr>
+<tr>
+<td>Can I have a receipt, please?</td>
+<td>Mund t&#235; m&#235; b&#235;ni nj&#235; fatur&#235;, ju lutem?&nbsp;-&nbsp;<i>mund t&#601; m&#601; b&#601;ni &#626;&#601; fatu&#638;&#601;, ju lut&#949;m?</i></td>
+</tr>
+</tbody>
+</table>
+	
+	
+</body>
+</html>

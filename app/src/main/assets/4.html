@@ -1,0 +1,288 @@
+<!--
+  ~ /*
+  ~ *  Created Ernald Zykaj on 29/12/20 10:26 PM
+  ~ *  Copyright Ⓒ 2020. All rights reserved Ⓒ 2020
+  ~ *  Last modified: 26/12/20 1:41 AM
+  ~ *
+  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  ~ *  except in compliance with the License. You may obtain a copy of the License at
+  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
+  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+  ~ *   either express or implied. See the License for the specific language governing permissions and
+  ~ *   limitations under the License.
+  ~ */
+  ~
+  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Learn</title>
+<style>
+
+body {
+margin-top:10px;
+   	margin-left:5px;
+	margin-right:5px;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+	font-size:18px;
+}
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+	font-size:20px;    
+}
+
+td, th { border: 1px solid #CCC; height: 30px; } /* Make cells a bit taller */
+
+th {  
+    background: #000000; /* Light grey background */
+	color: white;
+    font-weight: bold; /* Make sure they're bold */
+}
+
+td {  
+    background: #FAFAFA; /* Lighter grey background */
+    text-align: center; /* Center our text */
+}
+Now have a
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered td a
+{
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#000000;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+   }
+
+
+
+
+.bordered td {
+}
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#000000;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+	
+}
+
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+
+
+</style>
+
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" type="text/css" href="toggle.css">
+    <script type="text/javascript" src="toggle.js">
+	</script>
+
+	
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+
+
+
+	
+<h3 style="margin-top:-10px;">Conversation</h3>
+<table border="1" align="center" cellpadding="3" cellspacing="3" class="printDiv">
+<thead>
+<tr>
+<th>English</th>
+<th>Albanian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hello. How are you?</td>
+<td>&#199;kemi. Si po shkon?&nbsp;-&nbsp;<i>&#679;k&#603;mi? si p&#596; &#643;k&#596;n?</i></td>
+</tr>
+<tr>
+<td>Hello. I'm fine, thank you</td>
+<td>Mir&#235;dita. Mir&#235;, faleminderit!&nbsp;-&nbsp;<i>mi&#638;&#601;dita, mi&#638;&#601; fal&#949;mind&#949;&#638;it</i></td>
+</tr>
+<tr>
+<td>Do you speak Albanese?</td>
+<td>Flet shqip?</td>
+</tr>
+<tr>
+<td>No, I don&#39;t speak Albanese</td>
+<td>Jo, un&#235; nuk flas shqip.</td>
+</tr>
+<tr>
+<td>Only a little bit</td>
+<td>Vet&#235;m pak&nbsp;-&nbsp;<i>v&#949;t&#601;m pak</i></td>
+</tr>
+<tr>
+<td>Where do you come from?</td>
+<td>Nga vjen ti?&nbsp;-&nbsp;<i>n&#609;a vj&#603;n ti?</i></td>
+</tr>
+<tr>
+<td>What is your nationality?</td>
+<td>Nga vjen ti?&nbsp;-&nbsp;<i>n&#609;a vj&#603;n ti?</i></td>
+</tr>
+<tr>
+<td>I am English</td>
+<td>Un&#235; jam angleze</td>
+</tr>
+<tr>
+<td>And you, do you live here?</td>
+<td>Po ti, jeton k&#235;tu?&nbsp;-&nbsp;<i>p&#596; ti j&#949;t&#596;n k&#601;tu?</i></td>
+</tr>
+<tr>
+<td>Yes, I live here</td>
+<td>Po, jetoj k&#235;tu.&nbsp;-&nbsp;<i>p&#596; j&#949;t&#596;j k&#601;tu</i></td>
+</tr>
+<tr>
+<td>My name is Sarah, what's your name?</td>
+<td>Un&#235; jam Sara. Po ti?&nbsp;-&nbsp;<i>un&#601; jam sa&#638;a, p&#596; ti?</i></td>
+</tr>
+<tr>
+<td>Julian</td>
+<td>Zhyljen&nbsp;-&nbsp;<i>&#439;ylj&#949;n</i></td>
+</tr>
+<tr>
+<td>What are you doing here?</td>
+<td>Me &#231;far&#235; merresh k&#235;tu?&nbsp;-&nbsp;<i>m&#603; &#679;fa&#638;&#601; m&#603;r&#603;&#643; k&#601;tu?</i></td>
+</tr>
+<tr>
+<td>I am on holiday</td>
+<td>Jam me pushime.&nbsp;-&nbsp;<i>jam m&#603; pu&#643;im&#603;</i></td>
+</tr>
+<tr>
+<td>We are on holiday</td>
+<td>Jemi me pushime!&nbsp;-&nbsp;<i>j&#603;mi m&#603; pu&#643;im&#603;</i></td>
+</tr>
+<tr>
+<td>I am on a business trip</td>
+<td>Kam ardhur p&#235;r pun&#235;&nbsp;-&nbsp;<i>kam a&#638;&#240;u&#638; p&#601;&#638; pun&#601;</i></td>
+</tr>
+<tr>
+<td>I work here</td>
+<td>Un&#235; punoj k&#235;tu.&nbsp;-&nbsp;<i>un&#601; pun&#596;j k&#601;tu</i></td>
+</tr>
+<tr>
+<td>We work here</td>
+<td>Ne punojm&#235; k&#235;tu.&nbsp;-&nbsp;<i>n&#949; pun&#596;jm&#601; k&#601;tu</i></td>
+</tr>
+<tr>
+<td>Where are the good places to go out and eat?</td>
+<td>Ku ka ndonj&#235; vend t&#235; mir&#235; p&#235;r t&#235; ngr&#235;n&#235;?&nbsp;-&nbsp;<i>ku ka nd&#596;&#626;&#601; v&#949;nd t&#601; mi&#638;&#601; p&#601;&#638; t&#601; n&#609;&#638;&#601;n&#601;?</i></td>
+</tr>
+<tr>
+<td>Is there a museum in the neighbourhood?</td>
+<td>Ka ndonj&#235; muze k&#235;tu af&#235;r?&nbsp;-&nbsp;<i>ka nd&#596;&#626;&#601; muz&#949; k&#601;tu af&#601;&#638;?</i></td>
+</tr>
+<tr>
+<td>Where could I get an internet connection?</td>
+<td>Ku mund t&#235; lidhem me internetin?&nbsp;-&nbsp;<i>ku mund t&#601; li&#240;&#949;m m&#949; int&#949;&#638;n&#949;tin?</i></td>
+</tr>
+</tbody>
+</table>
+
+	
+	
+</body>
+</html>

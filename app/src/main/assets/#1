@@ -1,0 +1,43 @@
+
+
+
+
+******************************Travel Guide Complete Android App Tutorials********************************************************
+In this project Im gonna show you how to build an entire Travel App from scratch using Android Studio in Java language
+
+#1-Splash Screen
+#2-Login & Signup (FireBase)
+#3-Using .json files
+#4-RecyclerView with CardView
+#5-ActionBar || Toolbar ||
+#6-AndroidManifest.xml*
+#7-Modern Dashboard UI Design
+#8-Create Navigation Drawer Menu
+#9-Make a Library with country music
+#10-Make a FireBase Country Chat
+#11-Reset Password
+#12-Multiple Markers on Google Maps
+#13-Remember-Me Login Fuction
+#14-AdMood Real Ads
+#15- Last Video + Full Source Code (**Free**)
+
+
+ <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/web1"
+        >
+
+    </WebView>
+
+
+ private WebView webView1;
+
+
+webView1 = (WebView) findViewById(R.id.web1);
+        webView1.setWebChromeClient(new WebChromeClient());
+        webView1.loadUrl("file:///android_asset/html1.html");
+        WebSettings webSettings = webView1.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webView1.getSettings().setBuiltInZoomControls(true);
+        webView1.getSettings().setDisplayZoomControls(false);

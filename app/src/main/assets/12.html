@@ -1,0 +1,367 @@
+<!--
+  ~ /*
+  ~ *  Created Ernald Zykaj on 29/12/20 10:26 PM
+  ~ *  Copyright Ⓒ 2020. All rights reserved Ⓒ 2020
+  ~ *  Last modified: 26/12/20 1:41 AM
+  ~ *
+  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  ~ *  except in compliance with the License. You may obtain a copy of the License at
+  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
+  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+  ~ *   either express or implied. See the License for the specific language governing permissions and
+  ~ *   limitations under the License.
+  ~ */
+  ~
+  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Learn</title>
+<style>
+
+body {
+margin-top:10px;
+   	margin-left:5px;
+	margin-right:5px;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+	font-size:18px;
+}
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+	font-size:20px;    
+}
+
+td, th { border: 1px solid #CCC; height: 30px; } /* Make cells a bit taller */
+
+th {  
+    background: #000000; /* Light grey background */
+	color: white;
+    font-weight: bold; /* Make sure they're bold */
+}
+
+td {  
+    background: #FAFAFA; /* Lighter grey background */
+    text-align: center; /* Center our text */
+}
+Now have a
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered td a
+{
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#000000;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+   }
+
+
+
+
+.bordered td {
+}
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#000000;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+	
+}
+
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+
+
+</style>
+
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" type="text/css" href="toggle.css">
+    <script type="text/javascript" src="toggle.js">
+	</script>
+
+	
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+
+
+
+	
+<h3 style="margin-top:-10px;">Hotel</h3>
+
+<table border="1" align="center" cellpadding="3" cellspacing="3" class="printDiv">
+<thead>
+<tr>
+<th>English</th>
+<th>Albanian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The hotel</td>
+<td>Hoteli&nbsp;-&nbsp;<i>h&#596;t&#603;li</i></td>
+</tr>
+<tr>
+<td>Apartment</td>
+<td>Apartamenti&nbsp;-&nbsp;<i>apa&#638;tam&#603;nti</i></td>
+</tr>
+<tr>
+<td>Welcome!</td>
+<td>Mir&#235;sevjen!&nbsp;-&nbsp;<i>mi&#638;&#601;s&#603;vj&#603;n</i></td>
+</tr>
+<tr>
+<td>Do you have a room available?</td>
+<td>Keni ndonj&#235; dhom&#235; t&#235; lir&#235;?&nbsp;-&nbsp;<i>k&#603;ni nd&#596;&#626;&#601; &#240;&#596;m&#601; t&#601; li&#638;&#601;?</i></td>
+</tr>
+<tr>
+<td>Is there a bathroom in the room?</td>
+<td>A ka banj&#235; n&#235; dhom&#235;?&nbsp;-&nbsp;<i>a ka ba&#626;&#601; n&#601; &#240;&#596;m&#601;?</i></td>
+</tr>
+<tr>
+<td>Would you prefer two single beds?</td>
+<td>Doni nj&#235; dhom&#235; me dy krevat&#235; t&#235; ndar&#235;?&nbsp;-&nbsp;<i>d&#596;ni &#626;&#601; &#240;&#596;m&#601; m&#603; dy k&#638;&#603;vat&#601; t&#601; nda&#638;&#601;?</i></td>
+</tr>
+<tr>
+<td>Do you wish to have a twin room?</td>
+<td>Doni nj&#235; dhom&#235; me shtrat dopio?&nbsp;-&nbsp;<i>d&#596;ni &#626;&#601; &#240;&#596;m&#601; m&#603; &#643;t&#638;at d&#596;pi&#596;</i></td>
+</tr>
+<tr>
+<td>A room with bathtub - with balcony - with shower</td>
+<td>Dhom&#235; me banj&#235; - me ballkon - me dush&nbsp;-&nbsp;<i>&#240;&#596;m&#601; m&#949; ba&#626;&#601; - m&#949; ba&#619;k&#596;n &#150; m&#949; du&#643;</i></td>
+</tr>
+<tr>
+<td>Bed and breakfast</td>
+<td>M&#235;ngjesi i p&#235;rfshir&#235;&nbsp;-&nbsp;<i>m&#601;n&#607;&#949;si i p&#601;&#638;f&#643;i&#638;&#601;</i></td>
+</tr>
+<tr>
+<td>How much is it for a night?</td>
+<td>Sa kushton nata?&nbsp;-&nbsp;<i>sa ku&#643;t&#596;n nata?</i></td>
+</tr>
+<tr>
+<td>I would like to see the room first</td>
+<td>Doja q&#235; ta shihja dhom&#235;n n&#235; fillim, ju lutem.&nbsp;-&nbsp;<i>d&#596;ja c&#601; ta &#643;ihja &#240;&#596;m&#601;n n&#601; fi&#619;im</i></td>
+</tr>
+<tr>
+<td>Yes, of course</td>
+<td>Po, sigurisht&nbsp;-&nbsp;<i>p&#596;, si&#609;u&#638;i&#643;t</i></td>
+</tr>
+<tr>
+<td>Thank you, the room is very nice</td>
+<td>Faleminderit. Dhoma &#235;sht&#235; shum&#235; e mir&#235;&nbsp;-&nbsp;<i>fal&#603;mind&#603;&#638;it, &#240;&#596;ma &#601;&#643;t&#601; &#643;um&#601; &#603; mi&#638;&#601;</i></td>
+</tr>
+<tr>
+<td>OK, can I reserve for tonight?</td>
+<td>N&#235; rregull. A mund ta rezervoj p&#235;r sonte?&nbsp;-&nbsp;<i>n&#601; r&#949;&#609;u&#619;. a mund ta &#638;&#949;z&#949;&#638;v&#596;j p&#601;&#638; s&#596;nt&#949;?</i></td>
+</tr>
+<tr>
+<td>It's a bit too much for me, thank you</td>
+<td>Faleminderit, por &#235;sht&#235; pak e shtrenjt&#235; p&#235;r mua.&nbsp;-&nbsp;<i>fal&#949;mind&#949;&#638;it, p&#596;&#638; &#601;&#643;t&#601; pak &#949; &#643;t&#638;&#949;&#626;t&#601; p&#601;&#638; mua</i></td>
+</tr>
+<tr>
+<td>Could you take care of my luggage, please?</td>
+<td>Mund t'i merrni bagazhet e mia, ju lutem?&nbsp;-&nbsp;<i>mund t'i m&#603;rni ba&#609;a&#658;&#603;t &#603; mia, ju lut&#603;m</i></td>
+</tr>
+<tr>
+<td>Where is my room, please?</td>
+<td>Ku &#235;sht&#235; dhoma ime, ju lutem?&nbsp;-&nbsp;<i>ku &#601;&#643;t&#601; &#240;&#596;ma im&#949;, ju lut&#949;m?</i></td>
+</tr>
+<tr>
+<td>It is on the first floor</td>
+<td>&#203;sht&#235; n&#235; katin e par&#235;&nbsp;-&nbsp;<i>&#601;&#643;t&#601; n&#601; katin &#949; pa&#638;&#601;</i></td>
+</tr>
+<tr>
+<td>Is there a lift?</td>
+<td>Ka ashensor?&nbsp;-&nbsp;<i>ka a&#643;&#949;ns&#596;&#638;?</i></td>
+</tr>
+<tr>
+<td>The elevator is on your left</td>
+<td>Ashensori &#235;sht&#235; n&#235; t&#235; majt&#235;n tuaj&nbsp;-&nbsp;<i>a&#643;&#949;ns&#596;&#638;i &#601;&#643;t&#601; n&#601; t&#601; majt&#601;n tuaj</i></td>
+</tr>
+<tr>
+<td>The elevator is on your right</td>
+<td>Ashensori &#235;sht&#235; n&#235; t&#235; djatht&#235;n tuaj&nbsp;-&nbsp;<i>a&#643;&#949;ns&#596;&#638;i &#601;&#643;t&#601; n&#601; t&#601; djatht&#601;n tuaj</i></td>
+</tr>
+<tr>
+<td>Where is the laundry room, please?</td>
+<td>Ku ndodhet lavanderia?&nbsp;-&nbsp;<i>ku nd&#596;&#240;&#949;t lavand&#949;&#638;ia?</i></td>
+</tr>
+<tr>
+<td>It is on the ground floor</td>
+<td>&#203;sht&#235; n&#235; katin p&#235;rdhes&nbsp;-&nbsp;<i>&#601;&#643;t&#601; n&#601; katin p&#601;&#638;&#240;&#949;s</i></td>
+</tr>
+<tr>
+<td>Ground floor</td>
+<td>Kati p&#235;rdhes&nbsp;-&nbsp;<i>kati p&#601;&#638;&#240;&#949;s</i></td>
+</tr>
+<tr>
+<td>Bedroom</td>
+<td>Dhom&#235;&nbsp;-&nbsp;<i>&#240;&#596;m&#601;</i></td>
+</tr>
+<tr>
+<td>Dry cleaner's</td>
+<td>Patrim kimik&nbsp;-&nbsp;<i>past&#638;im kimik</i></td>
+</tr>
+<tr>
+<td>Hair salon</td>
+<td>Parukeri&nbsp;-&nbsp;<i>pa&#638;uk&#949;&#638;i</i></td>
+</tr>
+<tr>
+<td>Car parking space</td>
+<td>Parking&nbsp;-&nbsp;<i>pa&#638;kin&#609;</i></td>
+</tr>
+<tr>
+<td>Let's meet in the meeting room?</td>
+<td>Takohemi n&#235; sall&#235;n e mbledhjeve?&nbsp;-&nbsp;<i>tak&#596;h&#949;mi n&#601; sa&#619;&#601;n &#949; mbl&#949;&#240;j&#949;v&#949;?</i></td>
+</tr>
+<tr>
+<td>Meeting room</td>
+<td>Salla e mbledhjeve&nbsp;-&nbsp;<i>sa&#619;a &#949; mbl&#949;&#240;j&#949;v&#949;</i></td>
+</tr>
+<tr>
+<td>The swimming pool is heated</td>
+<td>Pishina &#235;sht&#235; ngrohur&nbsp;-&nbsp;<i>pi&#643;ina &#601;&#643;t&#601; n&#609;&#638;&#596;hu&#638;</i></td>
+</tr>
+<tr>
+<td>Swimming pool</td>
+<td>Pishina&nbsp;-&nbsp;<i>pi&#643;ina</i></td>
+</tr>
+<tr>
+<td>Please, wake me up at seven a.m.</td>
+<td>M&#235; zgjoni n&#235; or&#235;n shtat&#235;, ju lutem&nbsp;-&nbsp;<i>m&#601; z&#607;&#596;ni n&#601; &#596;&#638;&#601;n &#643;tat&#601;, ju lut&#949;m</i></td>
+</tr>
+<tr>
+<td>The key, please</td>
+<td>&#199;el&#235;sin, ju lutem&nbsp;-&nbsp;<i>&#679;&#949;l&#601;sin ju lut&#949;m</i></td>
+</tr>
+<tr>
+<td>The pass, please</td>
+<td>Fjal&#235;kalimin, ju lutem&nbsp;-&nbsp;<i>fjal&#601;kalimin, ju lut&#949;m</i></td>
+</tr>
+<tr>
+<td>Are there any messages for me?</td>
+<td>Ka mesazhe p&#235;r mua?&nbsp;-&nbsp;<i>ka m&#949;sa&#658;&#949; p&#601;&#638; mua?</i></td>
+</tr>
+<tr>
+<td>Yes, here you are</td>
+<td>Po, ja ku jan&#235;&nbsp;-&nbsp;<i>p&#596;, ja ku jan&#601;</i></td>
+</tr>
+<tr>
+<td>No, we didn't receive anything for you</td>
+<td>Jo, nuk ju ka ardhur asgj&#235;&nbsp;-&nbsp;<i>j&#596;, nuk ju ka a&#638;&#240;u&#638; as&#607;&#601;</i></td>
+</tr>
+<tr>
+<td>Where can I get some change?</td>
+<td>Ku mund t&#235; thyej n&#235; monedha?&nbsp;-&nbsp;<i>ku mund t&#601; &#952;y&#949;j n&#601; m&#596;n&#949;&#240;a?</i></td>
+</tr>
+<tr>
+<td>Please can you give me some change?</td>
+<td>Mund t&#235; m&#235; thyeni me monedha, ju lutem?&nbsp;-&nbsp;<i>mund t&#601; m&#601; &#952;y&#949;ni m&#949; m&#596;n&#949;&#240;a, ju lut&#949;m?</i></td>
+</tr>
+<tr>
+<td>We can make some for you, how much would you like?</td>
+<td>Po, mundemi. Sa doni t&#235; b&#235;ni?&nbsp;-&nbsp;<i>p&#596;, mund&#603;mi. sa d&#596;ni t&#601; b&#601;ni?</i></td>
+</tr>
+</tbody>
+</table>
+	
+</body>
+</html>
